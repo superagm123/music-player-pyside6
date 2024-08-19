@@ -1,1 +1,1 @@
-<img width="801" alt="Screenshot 2024-08-19 at 11 26 32 a m" src="https://github.com/user-attachments/assets/07fadb81-280d-4026-b32a-85fee28572f1">[Uploading Screenshot 2024-08-19 at 11.26.32 a.m..png…]()
+<img width="793" alt="Music Player Screenshot" src="https://github.com/user-attachments/assets/f934f44b-ae25-41e7-912b-d365befc77ab">[
