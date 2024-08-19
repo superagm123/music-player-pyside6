@@ -1,0 +1,26 @@
+QMainWindow{
+    background-color: #222831
+}
+
+QToolButton{
+    border: none
+}
+
+QToolButton::pressed{
+    border: 1px solid #76ABAE;
+    border-radius: 17px;
+}
+
+#song_progress::groove:horizontal{
+      border: 1px solid #f7f7f7;
+      height: 12px;
+      background: #FFFBE6;
+      margin: 2px 0;
+}
+
+#song_progress::handle:horizontal{
+       background: #1A3636;
+       border: 1px solid #5c5c5c;
+       width: 25px;
+       border-radius: 5px;
+}
