@@ -1,7 +1,7 @@
 from tinytag import TinyTag
 from PySide6.QtWidgets import QWidget, QMessageBox
 from PySide6.QtMultimedia import QAudioOutput, QMediaPlayer
-from PySide6.QtCore import QUrl, QTimer, Slot
+from PySide6.QtCore import QUrl, Slot
 from Model.Signals import MusicPlayerSignals
 
 
@@ -39,8 +39,8 @@ class MusicPlayer(QWidget):
 
     def __song_status_changed(self, status):
         if status == QMediaPlayer.MediaStatus.EndOfMedia:
-            self.__player.setPosition(0)
-            QTimer.singleShot(100, self.play_next_song)
+            self.__player.setPosition(0) #Setting the position to 0 fixes the freezing issue
+            self.play_next_song()
 
     @Slot()
     def __get_song_info(self):

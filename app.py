@@ -2,11 +2,9 @@ import sys
 import platform
 import time
 from pathlib import Path
-from functools import partial
 from PySide6.QtWidgets import QApplication, QMainWindow, QFileDialog
 from PySide6.QtGui import QIcon, QPixmap, QImage
 from PySide6.QtMultimedia import QMediaPlayer
-from PySide6.QtCore import QTimer
 from View.MainWindow import Ui_MainWindow
 from Model.MusicPlayer import MusicPlayer
 
@@ -32,9 +30,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def set_signals_connection(self):
         self.open_button.clicked.connect(self.load_file)
-        self.previous_button.clicked.connect(partial(QTimer.singleShot, 100, self.play_previous))
+        self.previous_button.clicked.connect(self.play_previous)
         self.play_button.clicked.connect(self.play)
-        self.next_button.clicked.connect(partial(QTimer.singleShot, 100, self.play_next))
+        self.next_button.clicked.connect(self.play_next)
         self.music_player.signals.songInfoChanged.connect(self.update_song_info)
         self.music_player.signals.songDurationChanged.connect(self.update_song_duration)
         self.music_player.signals.songPositionChanged.connect(self.update_song_position)
